@@ -1,0 +1,59 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+:focus { outline: 0; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+html {
+    background-color: #c9c9c9;
+	border-top: 3px solid #333;
+	color: #444;
+	font: normal 62.5%/1 helvetica, sans-serif;
+	padding: 0px;
+}
+
+body {
+    background-color: #e7e7e7;
+	-webkit-box-shadow: 0px 0px 20px #adadad;
+	margin: 4% auto 0;
+	text-align: left;
+	padding: 20px;
+    width: 960px;
+	height: 600px;
+    -moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+    position: relative;
+}
+
+a, a:visited { color: #f4d496; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+#laika_previous, #laika_next {
+	position: absolute;
+	top: 10px;
+	display: block;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	padding: 7px;
+	min-width: 80px;
+	text-align: center;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+#laika_previous {
+	left: 10px;
+	background-color: #353845;
+}
+
+#laika_next {
+	right: 10px;
+	background-color: #353845;
+}
+
+#laika_previous:hover, #laika_next:hover { text-decoration: none;  }
