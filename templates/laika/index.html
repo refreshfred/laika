@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
-{% block content %}
-	<h1>Laika - Easy slides with Django</h1>
+{% block title %}Laika | All slides{% endblock %}
 
-	<p>
-		Some text here
-	</p>
+{% block content %}
+	{% for object in object_list %}
+
+		<a href="#" title="{{ object.title }}">{{ object.title }}</a>
+
+	{% endfor %}
 {% endblock %}
