@@ -1,30 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Laika | All slides{% endblock %}
+{% block title %}Laika | {{ slide.title }}{% endblock %}
 
 {% block content %}
-	<h1>Welcome to Laika!</h1>
+	<h1>{{ slide.title }}</h1>
 
 	<p>
-		Laika is a "meta" demo, so to speak. It was developed in the space of two hours (design and code) by 
-		<a href="http://twitter.com/ryanmcgrath" title="Ryan McGrath on Twitter">Ryan McGrath</a>, as the basis for a presentation on getting started
-		with <a href="http://djangoproject.com/" title="Django">Django</a> for the <a href="http://refreshfred.com/" title="Refresh Fred">Refresh Fred</a> meetup
-		on November 11, 2009. These slides are best viewed in a modern browser (Firefox 3.5+, Webkit, or Opera 10), but they should gracefully degrade if you're
-		in the mood to commit a sin or two.
+		{{ slide.body }}
 	</p>
-
-	<p>
-		The following slides show the basics of Django by building out a simple slides application. They also discuss some history and general Django knowledge,
-		so it's worth reading through from beginning to end. The source code is all available on 
-		<a href="http://github.com/ryanmcgrath/laika" title="Laika on GitHub">GitHub</a> - you *are* on GitHub, right? ;)
-	</p>
-
-	<h2>Table of Contents:</h2>
-	<ol id="laika_toc">
-		{% for object in object_list %}
-			<li><a href="#" title="{{ object.title }}">{{ object.title }}</a></li>
-		{% endfor %}
-	</ol>
 {% endblock %}
 
 {% block menubar %}

@@ -22,12 +22,10 @@
 	<h2>Table of Contents:</h2>
 	<ol id="laika_toc">
 		{% for object in object_list %}
-			<li><a href="#" title="{{ object.title }}">{{ object.title }}</a></li>
+			<li><a href="/laika/slide/{{ object.slug }}" title="{{ object.title }}">{{ object.title }}</a></li>
 		{% endfor %}
 	</ol>
 {% endblock %}
 
 {% block menubar %}
-	<a href="#getStarted" id="laika_next" title="Get Started">Get Started &raquo;</a>
-{% endblock %}
-	
+{% endblock %}	

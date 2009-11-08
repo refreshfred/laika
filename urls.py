@@ -5,8 +5,10 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^laika/', include('laika.slides.urls')),
     (r'^admin/', include(admin.site.urls)),
+
+	# The following line isn't best practice, I'm just lazy - you should try not to catch all for one specific app.
+    (r'^laika/', include('laika.slides.urls')),
 )
 
 if settings.DEBUG:
