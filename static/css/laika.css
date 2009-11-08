@@ -3,11 +3,13 @@ small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label,
 margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
 :focus { outline: 0; }
 body { line-height: 1; }
-ol, ul { list-style: none; }
+ul { list-style: none; }
 table { border-collapse: separate; border-spacing: 0; }
 caption, th, td { text-align: left; font-weight: normal; }
 blockquote:before, blockquote:after, q:before, q:after { content: ""; }
 blockquote, q { quotes: "" ""; }
+
+@font-face { font-family: "Axel"; src: url(../fonts/axel-regular.ttf) format("truetype"); }
 
 html {
     background-color: #c9c9c9;
@@ -18,42 +20,65 @@ html {
 }
 
 body {
-    background-color: #e7e7e7;
+	background-color: #e7e7e7;
+	-webkit-border-radius: 6px;
 	-webkit-box-shadow: 0px 0px 20px #adadad;
 	margin: 4% auto 0;
 	text-align: left;
-	padding: 20px;
+	padding: 20px 20px 57px 20px;
     width: 960px;
-	height: 600px;
-    -moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-    position: relative;
+	position: relative;
+	background-repeat: top-left;
 }
 
-a, a:visited { color: #f4d496; text-decoration: none; }
+h1, h2 {
+	font: normal 1.6em/1.6em "Axel", helvetica, sans-serif;
+}
+
+a, a:visited { font-weight: bold; color: #3e874c; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-#laika_previous, #laika_next {
-	position: absolute;
-	top: 10px;
-	display: block;
+p {
+	margin: 0 0 15px 0;
+}
+
+#content {
 	font-size: 1.2em;
-	line-height: 1.4em;
-	padding: 7px;
-	min-width: 80px;
-	text-align: center;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
+	line-height: 1.5em;
 }
 
-#laika_previous {
-	left: 10px;
-	background-color: #353845;
+#laika_toc { padding-left: 40px; }
+#laika_toc li { margin-bottom: 2px; }
+
+#menubar {
+	background-color: #010101;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 37px;
+	width: 1000px;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
 }
 
-#laika_next {
-	right: 10px;
-	background-color: #353845;
+#laika_previous, #laika_next {
+	display: block;
+	height: 17px;
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 12px 20px 8px;
 }
 
-#laika_previous:hover, #laika_next:hover { text-decoration: none;  }
+#laika_previous { 
+	float: left; 
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+}
+
+#laika_next { 
+	float: right; 
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+}

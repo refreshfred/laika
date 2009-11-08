@@ -6,12 +6,16 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/laika.css">
 </head>
 <body>
-	<a href="#previous" id="laika_previous" title="Hit the previous slide">&laquo; Previous</a>
-	<a href="#next" id="laika_next" title="Hit the next slide">Next &raquo;</a>
-
-	{% block content %}
+	<div id="content">
+		{% block content %}
 	
-	{% endblock %}
-
+		{% endblock %}
+	</div>
+	
+	<div id="menubar">
+		{% block menubar %}
+		
+		{% endblock %}
+	</div>
 </body>
 </html>
