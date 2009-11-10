@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block menubar %}
-	<a href="#previous" id="laika_previous" title="Hit the previous slide">&laquo; Previous</a>
-	<a href="#next" id="laika_next" title="Hit the next slide">Next &raquo;</a>
+	<a href="/laika/slide/{{ previous_slide.slug }}" id="laika_previous" title="{{ previous_slide.title }}">{{ previous_slide.title }}</a>
+	<a href="/laika/slide/{{ next_slide.slug }}" id="laika_next" title="{{ next_slide.title }}">{{ next_slide.title }}</a>
 {% endblock %}
 	

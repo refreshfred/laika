@@ -11,4 +11,20 @@ def index(request):
 
 def slide(request, slug):
 	slide = Slide.objects.get(slug = slug)
-	return render_to_response('laika/slide.html', {'slide': slide})
+	next_slide = {}
+	previous_slide = {}
+	
+	# It's 5AM, the following two lines of code are a bad hack. Don't use them. ^_^ -- Ryan
+	# In an ideal world, I'd set the model to have something to organize and reference by - an exercise for the reader, perhaps? ;)
+	# If you make a solution, feel free to commit it back. :D
+	try:
+		next_slide = Slide.objects.get(id = (slide.id + 1))
+	except:
+		pass
+	
+	try:
+		previous_slide = Slide.objects.get(id = (slide.id - 1))
+	except:
+		pass
+	
+	return render_to_response('laika/slide.html', {'slide': slide, 'next_slide': next_slide, 'previous_slide': previous_slide})
